@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  Nini Events
+//
+//  Created by Krishna_Mac_1 on 3/16/15.
+//  Copyright (c) 2015 Krishna_Mac_1. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+
+#define Kwebservices @"http://api.ophemy.com/ninievents.asmx"
+#define Kregister @"http://www.ophemy.com"
+
+//#define Kwebservices @"http://112.196.24.205:1071/NiniEvents.asmx"
+
+
+
+#pragma mark Device frame check
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPAD_Pro (IS_IPAD && SCREEN_MAX_LENGTH == 1366.0)
